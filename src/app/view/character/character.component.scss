@@ -1,0 +1,47 @@
+.container {
+  margin: 25px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.frontPage {
+  display: flex;
+  justify-content: center;
+}
+
+.img-frontPage{
+  width: 600px;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  width: 500px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  width: 100px;
+  display: flex;
+  margin: 80px;
+  align-items: center;
+
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px;
+  box-sizing: border-box;
+}

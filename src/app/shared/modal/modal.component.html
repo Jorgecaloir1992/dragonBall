@@ -1,0 +1,10 @@
+<div class="modal" [ngClass]="{'show': show}" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h2>{{ selectedCard?.name }}</h2>
+      <img [src]="selectedCard?.image" alt="{{ selectedCard?.name }}">
+      <p><strong>Poder:</strong> {{ selectedCard?.power }}</p>
+      <p><strong>Raza:</strong> {{ selectedCard?.race }}</p>
+      <p>{{ selectedCard?.description }}</p>
+    </div>
+  </div>

@@ -1,0 +1,14 @@
+<div class="frontPage">
+	<img class="img-frontPage" src="../../../assets/image/Dragon_Ball_Z_logo.svg" alt="">
+</div>
+
+<div class="search">
+	<input type="text" placeholder="Buscar" (input)="onSearch($event)">
+</div>
+
+<app-modal [selectedCard]="selectedCard" [show]="show">
+</app-modal>
+
+<div class="card-list">
+	<app-cards *ngFor="let iten of filter" [data]="iten" (select)="onSelected($event)"></app-cards>
+</div>
