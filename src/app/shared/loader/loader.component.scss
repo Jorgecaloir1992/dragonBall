@@ -1,0 +1,35 @@
+$loader-size: 100px;
+$background-opacity: 0.8;
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, $background-opacity);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nube {
+  width: $loader-size;
+  height: $loader-size;
+  background: url('../../../assets/image/nube.jpg') no-repeat center;
+  background-size: contain;
+  animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -5,13 +5,15 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { ModalComponent } from './modal/modal.component';
 import { CardsComponent } from './cards/cards.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
   declarations: [
     ModalComponent,
     CardsComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
   exports : [
     ModalComponent,
     CardsComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

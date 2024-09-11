@@ -12,3 +12,5 @@
 <div class="card-list">
 	<app-cards *ngFor="let iten of filter" [data]="iten" (select)="onSelected($event)"></app-cards>
 </div>
+
+<app-loader [isLoading]="isLoading"></app-loader>

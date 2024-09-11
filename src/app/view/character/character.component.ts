@@ -12,8 +12,7 @@ export class CharacterComponent implements OnInit {
 	filter: any
 	selectedCard: any = null;
 	show: boolean = false;
-	limmit :number = 30
-	page: number = 1
+	isLoading: boolean = false;
 
 	constructor(private servicesCharacter: ServicesService) { }
 
@@ -23,6 +22,7 @@ export class CharacterComponent implements OnInit {
 	}
 
 	getCharacter() {
+		this.loading()
 		this.servicesCharacter.Character().subscribe((data: any) => {
 			console.log(data.meta, "aqui buscando resultados")
 			this.characters = data.items
@@ -41,4 +41,11 @@ export class CharacterComponent implements OnInit {
 		console.log(this.selectedCard, " elemento seleccionado")
 		console.log(this.show)
 	}
+
+	loading(){
+		this.isLoading = true;
+		setTimeout(() => {
+		  this.isLoading = false;
+		}, 2000);
+	  }
 }
